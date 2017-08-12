@@ -10,11 +10,11 @@ setup(name='getyourbit',
 	license='MIT',
 	packages=['getyourbit'],
 	install_requires=['requests==2.18.3'],
-	python_requires='>=2.7'
+	python_requires='>=2.7',
 	classifiers=[
 		'Topic :: Internet',
-		'Topic :: Internet :: WWW/HTTP'
-		'Topic :: Internet :: WWW/HTTP :: Dynamic Content'
+		'Topic :: Internet :: WWW/HTTP',
+		'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
 		'Programming Language :: Python :: 2',
 		'Programming Language :: Python :: 3'
 	]
