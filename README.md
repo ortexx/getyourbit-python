@@ -41,7 +41,7 @@ Logout from the API. It gives an error without authorization before.
 ### .request(url, **kwargs)
 Request to the API without scrolling to get data. 
 It returns all response body as object.
-### .scroll(url, data={}, callback=null, **kwargs)
+### .scroll(url, data={}, callback=None, **kwargs)
 ### .scroll(url, data={}, **kwargs)
 ### .scroll(url, **kwargs)
 Request to the API with scrolling to get data. You can pass callback to control every chunk. You will get three arguments:
