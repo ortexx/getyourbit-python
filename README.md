@@ -1,4 +1,4 @@
-# [GetYourBit.com client](https://getyourbit.com) 
+# [GetYourBit.com](https://getyourbit.com) client
 
 This library allows you to make requests easily.
 
