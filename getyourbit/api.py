@@ -11,38 +11,38 @@ class Api:
 
     def __request(self, url, **kwargs):
         response = requests.post(url, **kwargs)
-        response = response.json()        
-        if 'error' in response:
-            message = response['message']
-            if 'meta' in response:
-                message += ' ' + json.dumps(response['meta'])
+        body = response.json()        
+        if 'error' in body:
+            message = body['message']
+            if 'meta' in body:
+                message += ' ' + json.dumps(body['meta'])
             raise Exception(message)
-        return response
+        return body
 
     def __next(self, res, url, scroll, callback, **kwargs):
         if scroll:
             kwargs['json']['scroll'] = scroll    
-        response = self.request(url, **kwargs)
-        res += response['data']        
+        body = self.request(url, **kwargs)
+        res += body['data']        
         if callback:
-            callback(response, response['data'], res)
-        if('scroll' in response and response['scroll']):
-            return self.__next(res, url, response['scroll'], callback, **kwargs)
+            callback(body, body['data'], res)
+        if('scroll' in body and body['scroll']):
+            return self.__next(res, url, body['scroll'], callback, **kwargs)
         return res
 
     def auth(self, user, password, **kwargs):
         kwargs['auth'] = (user, password)
-        response = self.__request(self.url + '/auth/', **kwargs)
-        self.token = response['token']        
+        body = self.__request(self.url + '/auth/', **kwargs)
+        self.token = body['token']        
         return self.token
 
     def logout(self, **kwargs):
         if not self.token:
             raise Exception('You have to login before to logout')            
         kwargs['json'] = {'token': self.token}
-        response = self.__request(self.url + '/logout/', **kwargs)  
+        body = self.__request(self.url + '/logout/', **kwargs)  
         self.token = None
-        return response
+        return body
 
     def request(self, url, data={}, **kwargs):       
         if 'json' in kwargs:
