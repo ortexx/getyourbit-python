@@ -1,0 +1,8 @@
+
+/dist/
+
+*.idea
+*.vscode
+*.pyc
+/*.egg-info
+
