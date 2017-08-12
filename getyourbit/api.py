@@ -46,11 +46,9 @@ class Api:
 
     def request(self, url, data={}, **kwargs):       
         if 'json' in kwargs:
-            data = kwargs['json']
-        
+            data = kwargs['json']        
         if 'data' in kwargs:
             data = kwargs['data']
-
         kwargs['json'] = data
         kwargs['json']['token'] = self.token   
         url = self.url + '/' + re.sub(r'^[\/]+', '', url) 
