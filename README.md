@@ -33,7 +33,7 @@ api.logout()
 ## Api
 ### .auth(login, password, **kwargs)
 Login to the API. You can get __login__ and __password__ [on the site](https://getyourbit.com) after a subscription.
-You can pass through __kwargs__ any [requests](https://github.com/requests/requests) module option. 
+You can pass through __kwargs__ any [requests](https://github.com/requests/requests) module option.   
 Free services don't require authorization.
 ### .logout()
 Logout from the API. It gives an error without authorization before.
