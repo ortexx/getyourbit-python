@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='getyourbit',
-	version='0.0.2',
+	version='0.0.3',
 	descpipription='Getyourbit.com client',
 	keywords='getyoubit getyoubit.com ip proxy api geolocation cidr',
 	url='http://github.com/ortexx/getyourbit-python',

@@ -69,7 +69,8 @@ class Api:
     def scroll(self, url, data={}, callback=None, **kwargs):
         if 'json' in kwargs:
             data = kwargs['json']
+            
         kwargs['json'] = data
         res = []
-        
+
         return self.__next(res, url, None, callback, **kwargs)   
