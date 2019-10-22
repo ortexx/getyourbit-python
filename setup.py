@@ -9,7 +9,7 @@ setup(name='getyourbit',
 	author_email='mywebstreet@gmail.com',
 	license='MIT',
 	packages=['getyourbit'],
-	install_requires=['requests==2.18.3'],
+	install_requires=['requests==2.20.0'],
 	python_requires='>=2.7',
 	classifiers=[
 		'Topic :: Internet',
